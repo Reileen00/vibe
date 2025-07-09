@@ -65,6 +65,8 @@ const AssistantMessage=({
     onFragmentClick,
     type,
 }:AssistantMessageProps)=>{
+
+    console.log("Assistant content:", content);
     return (
         <div className={cn(
             "flex flex-col group px-2 pb-4",
@@ -83,6 +85,7 @@ const AssistantMessage=({
                     {format(createdAt,"HH:mm 'on' MMM dd,yyyy")}
                 </span>
             </div>
+
             <div className="pl-8 flex flex-col gap-y-4 ">
                 <span>{content}</span>
                 {fragment && type==='RESULT' && (
